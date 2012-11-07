@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inputViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/custom_bg_1"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/scaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonScale"
+            android:src="@drawable/ratio" />
+
+        <ImageView
+            android:id="@+id/effectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonEffect"
+            android:src="@drawable/effects" />
+
+        <ImageView
+            android:id="@+id/inputButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonInput"
+            android:src="@drawable/input" />
+
+        <ImageView
+            android:id="@+id/dipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonDip"
+            android:src="@drawable/dip" />
+
+        <ImageView
+            android:id="@+id/statesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonState"
+            android:src="@drawable/state" />
+
+        <ImageView
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgselector"
+            android:focusable="true"
+            android:onClick="onButtonExit"
+            android:src="@drawable/quitblack" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menuLayout"
+        android:layout_below="@+id/menuLayout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_bg_2"
+        android:focusable="true"
+        android:visibility="gone" >
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/menuDipSwitchs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/menuLayout"
+        android:layout_below="@+id/menuLayout"
+        android:background="@drawable/custom_bg_1"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/dipServiceButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bgselector"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonDipService"
+            android:text="Service switch"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/dipTestButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bgselector"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonDipTest"
+            android:text="Test switch"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dipResetButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgselector"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonDipReset"
+            android:text="Reset switch"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/menuLayout"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_bg_1"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/useHardwareButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bgselector"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonHardwareInput"
+            android:text="Use hardware input"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/setHardwareButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgselector"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonSetHardwareButtons"
+            android:text="Set hardware buttons"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    
+</RelativeLayout>

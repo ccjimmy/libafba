@@ -1,0 +1,29 @@
+LOCAL_ARM_MODE   := arm
+
+LOCAL_CFLAGS := -pipe \
+		-O3 \
+	   	-fforce-addr -finline-limit=1200 -fthread-jumps \
+	   	-fexpensive-optimizations -fpermissive -Wno-write-strings \
+	   	-DANDROID -DLSB_FIRST -DBUILD_SDL -DPRINT_DEBUG_INFO -D__fastcall="" -DINCLUDE_LIB_PNGH
+
+
+INC_PATH := $(call my-dir)
+#$(warning $(INC_PATH))
+
+LOCAL_C_INCLUDES := $(INC_PATH)/../SDL/include $(INC_PATH) \
+			$(INC_PATH)/burn $(INC_PATH)/burn/devices $(INC_PATH)/burn/drv $(INC_PATH)/burn/snd \
+			$(INC_PATH)/burn/drv \
+			$(INC_PATH)/burn/drv/capcom $(INC_PATH)/burn/drv/cave \
+			$(INC_PATH)/burn/drv/cps3 $(INC_PATH)/burn/drv/dataeast $(INC_PATH)/burn/drv/galaxian \
+			$(INC_PATH)/burn/drv/irem $(INC_PATH)/burn/drv/konami $(INC_PATH)/burn/drv/megadrive \
+			$(INC_PATH)/burn/drv/neogeo $(INC_PATH)/burn/drv/pce $(INC_PATH)/burn/drv/pgm $(INC_PATH)/burn/drv/pre90s \
+			$(INC_PATH)/burn/drv/psikyo $(INC_PATH)/burn/drv/pst90s $(INC_PATH)/burn/drv/sega \
+			$(INC_PATH)/burn/drv/snes $(INC_PATH)/burn/drv/taito $(INC_PATH)/burn/drv/toaplan \
+			$(INC_PATH)/burner $(INC_PATH)/burner/sdl \
+			$(INC_PATH)/cpu $(INC_PATH)/cpu/sh2 $(INC_PATH)/cpu/z80 $(INC_PATH)/cpu/m68k \
+			$(INC_PATH)/cpu/m6809 $(INC_PATH)/cpu/hd6309 $(INC_PATH)/cpu/m6800 \
+			$(INC_PATH)/cpu/m6502 $(INC_PATH)/cpu/i8039 \
+			$(INC_PATH)/cpu/m6805 $(INC_PATH)/cpu/h6280 $(INC_PATH)/cpu/z80 \
+			$(INC_PATH)/intf $(INC_PATH)/intf/audio $(INC_PATH)/intf/input $(INC_PATH)/intf/cd $(INC_PATH)/intf/video $(INC_PATH)/intf/video/scalers \
+			$(INC_PATH)/dep/generated $(INC_PATH)/dep/libs/lib7z $(INC_PATH)/dep/libs/libpng $(INC_PATH)/dep/libs/zlib
+
