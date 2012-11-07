@@ -14,3 +14,21 @@ gen/
 
 # Local configuration file (sdk path, etc)
 local.properties
+
+##
+## C/C++ (jni)
+##
+# Compiled Object files
+obj/
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
