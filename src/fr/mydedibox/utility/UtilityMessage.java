@@ -19,31 +19,18 @@ public class UtilityMessage
 	private boolean indeterminate = true;
 	public boolean isShowing = false;
 	
-	
 	public UtilityMessage ( Activity pActivity )
 	{
 		activity = pActivity;
 		
 		message = new String( "Please Wait" );
 		
-		dialog = new ProgressDialog( activity.getApplicationContext() );
+		dialog = new ProgressDialog( activity );
 		dialog.setTitle( Utility.getTAG() );
 		dialog.setMessage( message );
 		dialog.setIndeterminate( true );
 		dialog.setCancelable( false );
 	}
-	
-	/*
-	public void reset()
-	{
-		Utility.log( "UtilityMessage: Reseting dialog" );
-		
-		dialog = new ProgressDialog( activity );
-		dialog.setTitle( Utility.getTAG() );
-		dialog.setCancelable( false );
-		this.updateDialog();
-	}
-	*/
 	
 	public void updateDialog()
 	{
